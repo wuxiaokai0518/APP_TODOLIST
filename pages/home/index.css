@@ -3,7 +3,7 @@ body{
 }
 
 .navbar-default {
-    background-color: red;
+    background-color: #c7254e;
 }
 
 .c1 {
@@ -30,4 +30,10 @@ body{
 .list-group>li{
     width: 73%;
     margin-left: 26%;
+}
+
+.icon-del{
+    width: 20px;
+    height: 20px;
+    float: right;
 }
