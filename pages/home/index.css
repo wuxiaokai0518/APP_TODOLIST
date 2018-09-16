@@ -1,39 +1,50 @@
-body{
-    background-color: #f7f7f7;
+body {
+  background-color: #f7f7f7;
 }
 
 .navbar-default {
-    background-color: #c7254e;
+  background-color: #c7254e;
 }
 
 .c1 {
-    color: white;
-    margin-left: 30%;
-    line-height: 38px;
+  color: white;
+  margin-left: 30%;
+  line-height: 38px;
 }
 
 .todo {
-    width: 100%;
-    height: 300px;
-    margin-top: 80px;
+  width: 100%;
+  height: 300px;
+  margin-top: 80px;
 }
 
-.c2{
-    margin-left: 26%;
+.c2 {
+  margin-left: 26%;
 }
 
-.form-control{
-    width: 73%;
-    margin-left: 26%;
+.form-control {
+  width: 73%;
+  margin-left: 26%;
 }
 
-.list-group>li{
-    width: 73%;
-    margin-left: 26%;
+.list-group > li {
+  width: 73%;
+  height: 38px;
+  margin-left: 26%;
 }
 
-.icon-del{
-    width: 20px;
-    height: 20px;
-    float: right;
+.icon-del {
+  width: 20px;
+  height: 20px;
+  float: right;
+}
+
+.icon-1 {
+  width: 20px;
+  height: 20px;
+  float: right;
+  background: url("../../public/images/delete.png") no-repeat;
+  background-size:20px 20px; 
+  background-position-x: 100%;
+  background-position-y: 50%;
 }

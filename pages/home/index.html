@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="UTF-8">
     <title>TODO待办事项列表</title>
@@ -10,33 +11,28 @@
     <script src="../../public/css/font/iconfont.js"></script>
     <script src="./index.js"></script>
 </head>
+
 <body>
-<div class="container">
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <h4 class="c1">任务计划列表</h4>
-    </nav>
-    <div class="todo">
-        <h4 class="c2">添加任务:</h4>
-        <input type="text"
-               class="form-control"
-               id="name"
-               placeholder="例如:吃饭睡觉打豆豆；提示：+回车即可添加任务"
-               v-on:keyup="addTodo">
-        <h4 class="c2">任务列表:</h4>
-        <ul class="list-group">
-            <li class="list-group-item" v-for="item in list" v-on:mouseenter="hiddenTodo"
-                v-on:mouseleave="showTodo">
-                <div>
-                    <input class="checkbox-circle" type="checkbox">
-                    <label>{{ item.title }}</label>
-                    <img hidden="hidden"
-                         src="../../public/images/delete.png"
-                         class="icon-del"
-                    >
-                </div>
-            </li>
-        </ul>
+    <div class="container">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <h4 class="c1">任务计划列表</h4>
+        </nav>
+        <div class="todo">
+            <h4 class="c2">添加任务:</h4>
+            <input type="text" class="form-control" id="name" placeholder="例如:吃饭睡觉打豆豆；提示：+回车即可添加任务" v-on:keyup="addTodo">
+            <h4 class="c2">任务列表:</h4>
+            <ul class="list-group">
+                <li class="list-group-item" v-for="(item,index) in list" v-on:mouseenter="hiddenTodo(index)"
+                    v-on:mouseleave="showTodo(index)">
+                    <div v-on:click="delTodo(index)" v-bind:class="{'icon-1':classenable&&index==current}"></div>
+                    <div>
+                        <input type="checkbox" id="checkbox" model='checked'>
+                        <label>{{ item.title }}</label>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
-</div>
 </body>
+
 </html>
